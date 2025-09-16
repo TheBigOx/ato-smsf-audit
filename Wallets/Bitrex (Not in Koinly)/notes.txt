@@ -1,0 +1,25 @@
+This wallet was never connected to koinly. It was used to acquire HBAR tokens which were later transferred back into Binance account. 
+
+2019-09-28 (ID: A0888093…)
+
+Type: Withdrawal
+
+From: BTC Markets wallet
+
+Currency: ETH
+
+Description: “Conversion to HBAR via BITREX exchange. See Bitrex order history”
+🔑 This matches the 3.79 ETH deposit + order to buy 15,916 HBAR on Bittrex we discussed. That’s where HBAR enters the transaction list.
+
+2019-11-24 (IDs: F4E465E… and 8D33F66…)
+
+Type: Deposit
+
+To: Binance;binance
+
+Currency: HBAR
+
+TxDest: 0.0.23909 (Hedera address)
+
+Notes: “Transfer from HBAR wallet”
+🔑 These are your withdrawals from Bittrex → external Hedera wallet → deposits into Binance.

@@ -1,0 +1,59 @@
+What the data shows
+
+Koinly ledger withdrawals (2021-03-15)
+
+Several withdrawals of XDC from your Ledger wallet to Bitrue:
+
+39,347.27 XDC
+
+1,000 XDC
+
+1,000 XDC
+
+The description already notes:
+
+“Sent to Bitrue as it was the only wallet that would trade XDC pairs…”
+
+These are outbound transfers from your Ledger to Bitrue.
+
+Bitrue deposit history (2021-04-13 / 14)
+
+40,147.27 XDC deposit
+
+800 XDC deposit
+
+The large 39k withdrawal + one of the 1k withdrawals line up closely (≈40,347 XDC). Bitrue shows a net deposit of ~40,147 XDC — about 200 XDC less, likely due to:
+
+Fees,
+
+A missing/mis-timed deposit record, or
+
+A small portion withdrawn again soon after.
+
+The 800 XDC deposit corresponds roughly to the other 1,000 XDC withdrawal. Again, there’s a ~200 XDC discrepancy.
+
+➝ This is why your numbers don’t “add up”: the amounts don’t match one-for-one, but they’re within a small range. Bitrue may have aggregated deposits, deducted fees, or handled rounding differently.
+
+Bitrue trades
+Once the XDC hit Bitrue, you traded it into other currencies:
+
+On 2021-05-10, you sold 40,947.2 XDC for ~3,923 USDT.
+
+This matches the inflow of ~40k XDC from Ledger to Bitrue a few weeks earlier.
+
+➝ So the lifecycle is: Ledger → Bitrue deposit (≈40k XDC) → Sell for USDT.
+
+How to annotate in Koinly
+
+For each withdrawal from Ledger to Bitrue:
+
+Append note like:
+GPT Says: Sent to Bitrue wallet for trading XDC pairs. Corresponds to Bitrue deposit(s) of ~40,147 XDC (Apr 2021). Later sold on Bitrue for ~3,923 USDT.
+
+For the discrepancy (1000 vs 800, 39k vs 40,147):
+
+Explain as:
+Slight mismatch between Ledger withdrawal and Bitrue deposit records (~200 XDC difference), likely due to fees or Bitrue recording conventions.
+
+
+ 
