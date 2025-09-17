@@ -1,6 +1,6 @@
 # Explanation of XPUB, Ledger, and Exchange Usage
 
-## XPUB and Ledger Address Generation  
+## XPUB and Ledger Address Generation
 
 Ledger devices use a **master public key (XPUB)** for each cryptocurrency account.  
 - The XPUB is mathematically derived from the private seed stored on the Ledger.  
@@ -14,7 +14,7 @@ Ledger devices use a **master public key (XPUB)** for each cryptocurrency accoun
 
 ---
 
-## Use of Bitrue for XDC Transactions  
+## Use of Bitrue for XDC Transactions
 
 XDC (XinFin) was not supported natively on Ledger or most mainstream exchanges at the time.  
 - Bitrue was one of the only liquid exchanges where XDC could be traded.  
@@ -25,7 +25,7 @@ This is why some transactions show movement of XDC from Ledger to Bitrue — Bit
 
 ---
 
-## Use of Bittrex for HBAR Purchases  
+## Use of Bittrex for HBAR Purchases
 
 HBAR (Hedera Hashgraph) was not widely available on major Ledger-compatible exchanges at the time.  
 - Bittrex was used as the trading venue to acquire HBAR.  
@@ -34,88 +34,26 @@ HBAR (Hedera Hashgraph) was not widely available on major Ledger-compatible exch
 
 ---
 
+## Metamask / Uniswap and Related Transfers
 
+- **Initial Funding from Binance**  
+  In early May 2021, ETH was withdrawn from **Binance** to the Metamask wallet **0x7DC269…** in two transactions:  
+  *0xf6d732… (0.0853 ETH)* and *0x54eec9… (1.8175 ETH)* for a total of about **1.9 ETH**.
 
-### Timeline of Events
+- **Attempted Uniswap Swap**  
+  On 2021-05-10 a Uniswap v3 trade (**tx 0x4851fb…**) was attempted for **0.075 ETH**,  
+  but it **reverted (failed)** and no tokens were purchased. Only ~0.017 ETH was lost in gas fees.
 
-#### 1️⃣ Deposits from Binance to Your Wallet
+- **Return of Funds to Binance**  
+  After the failed trade, the entire balance—**1.873 ETH**—was sent **back to Binance**  
+  (**tx 0x8b3c88…**, recorded in Koinly as a Binance deposit).
 
-- **0xf6d732… (Block 12402776)** – **0.0853 ETH IN**  
-  From *Binance 10* → your address **0x7DC269…**  
-  Small top-up from Binance.
-
-- **0x54eec9… (Block 12405465)** – **1.8175 ETH IN**  
-  From *Binance 4* → **0x7DC269…**  
-  Main deposit of ETH from Binance.
-
-Together these equal about **1.90 ETH**, which matches the **1.873 ETH deposit recorded in Koinly** (minor difference is network fees).
-
----
-
-#### 2️⃣ Attempted Trading on Uniswap (Transaction Reverted)
-
-- **0x4851fb… (Block 12405499)** – **0.0753 ETH OUT (Attempted)**  
-  To **Uniswap V3 Router**  
-  *This swap failed and was reverted.*  
-  **No tokens were exchanged** and the 0.0753 ETH remained in your wallet.  
-  **Gas cost:** ~0.017 ETH (only loss from this attempt).
+- **Later Ledger Transfer**  
+  In November 2021, ~0.284 ETH arrived from another wallet (**tx 0xc99c30…**)  
+  and **0.281 ETH** was then sent back to Binance (**tx 0x032252…**),  
+  representing the Ledger → Binance transfer in Koinly.
 
 ---
-
-#### 3️⃣ Internal “SELF” Transactions
-
-- **0x935934… & 0x354cda… – 0 ETH transfers**  
-  “SELF” means internal moves or contract interactions.  
-  These are simply internal bookkeeping transactions on Ethereum; no coins changed hands.
-
----
-
-#### 4️⃣ Withdrawal to Binance (May 10, 2021)
-
-- **0x8b3c88… (Block 12408311)** – **1.8733 ETH OUT**  
-  From **0x7DC269…** → **0xE25A0aBD…** (Binance deposit address)  
-  **Gas fee:** 0.007 ETH.  
-  Matches the Koinly record of a **1.873 ETH deposit into Binance** on 2021-05-10.
-
----
-
-#### 5️⃣ Later Activity (November 2021)
-
-- **0xc99c30… (Block 13528597)** – **0.2843 ETH IN**  
-  From **0x22A3d1…** → **0x7DC269…**  
-  Incoming transfer—possibly another wallet you control.
-
-- **0x032252… (Block 13528718)** – **0.2813 ETH OUT**  
-  From **0x7DC269…** → **0xE25A0aBD…** (Binance)  
-  **Gas fee:** 0.0025 ETH.  
-  This is the **Ledger → Binance** transfer recorded in Koinly on 2021-11-01 for 0.2813 ETH.
-
----
-
-### Overall Story
-
-- ETH came in from Binance (about 1.9 ETH total) to your personal wallet **0x7DC269…**.
-- You **attempted a Uniswap v3 swap of 0.075 ETH**, but it **reverted**, so no trade occurred.  
-  Only ~0.017 ETH was spent on gas.
-- Shortly afterward, you **withdrew almost all funds (1.873 ETH) back to Binance**, paying normal network fees.
-- Months later, you **received ~0.284 ETH** (likely from another of your wallets or an exchange) and then **sent ~0.281 ETH back to Binance**.
-
----
-
-### Key Points for Your Records
-
-* All major in/out flows match the Koinly CSV:
-  * **Deposit 1.873 ETH to Binance – 2021-05-10**
-  * **Transfer 0.281 ETH Ledger → Binance – 2021-11-01**
-* The Uniswap transaction **did not execute**, so there is **no token purchase to account for**—only the gas fee.
-* “SELF” transactions are internal Ethereum bookkeeping and don’t represent new deposits or withdrawals.
-
----
-
-
-
-**Suggested Koinly Notes**
-
 
 ## Summary
 
@@ -144,5 +82,3 @@ Together these equal about **1.90 ETH**, which matches the **1.873 ETH deposit r
   * All deposits and withdrawals reconcile with the Koinly CSV.  
   * “SELF” transactions are internal Ethereum bookkeeping and not separate asset movements.  
   * No Uniswap token purchase occurred—only a gas expense.
-
-This single summary covers the Ledger/XPUB mechanics, the need for Bitrue and Bittrex in specific trades, and the full Metamask/Uniswap timeline for accurate auditing and Koinly documentation.
