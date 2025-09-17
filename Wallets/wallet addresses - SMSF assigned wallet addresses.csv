@@ -1,0 +1,11 @@
+All transactions are recorded in Koinly.,,,,,,,
+Bitfrost App,,,,,,,
+FLR,0xBf091534baeA6Df1E81BbD6C0231401B1373420E,https://flarescan.com/address/0xBf091534baeA6Df1E81BbD6C0231401B1373420E,,,,,
+Ledger,,,,,,,
+BTC,"Ledger live does not show old addresses, it uses xpub to generate new addresses.  I have included all the transactions in the ledgerlive-operations-2025.09.16 file, which match with what's recorded in koinly.",,,,,,
+"FLR, SGB",0x41b7DACce6f6f7C3c46562744e04cC8C2dac0702,https://etherscan.io/address/0x41b7dacce6f6f7c3c46562744e04cc8c2dac0702,,,,,This address was used to create the FLR token address in the XRP ledger.
+ETH (XinFin - XDC),0x22A3d1532C1b9BFeC70c5C29487480ad27fCb32F,https://etherscan.io/address/0x22a3d1532c1b9bfec70c5c29487480ad27fcb32f,,,,,
+FLR,0x41b7DACce6f6f7C3c46562744e04cC8C2dac0702,https://flarescan.com/address/0x41b7DACce6f6f7C3c46562744e04cC8C2dac0702,,,,,
+FLR,0x22A3d1532C1b9BFeC70c5C29487480ad27fCb32F,https://flarescan.com/address/0x22A3d1532C1b9BFeC70c5C29487480ad27fCb32F,,,,,
+XRP,r8ShS13AiHAVja5MtJachRm63JEp5U8hs,https://xrpscan.com/account/r8ShS13AiHAVja5MtJachRm63JEp5U8hs,,,,,
+XRP,rJaE6WWoV4er5qaPLFFuGmUuJ2aQRKYMxs,https://xrpscan.com/account/rJaE6WWoV4er5qaPLFFuGmUuJ2aQRKYMxs,,,,,
