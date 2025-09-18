@@ -55,6 +55,32 @@ HBAR (Hedera Hashgraph) was not widely available on major Ledger-compatible exch
 
 ---
 
+
+
+## How Centralized Exchanges (e.g., Binance, Kraken) Manage Wallets  
+
+Centralized exchanges operate very differently from self-custody wallets (like Ledger or Metamask):  
+
+- **Shared Wallets and Custody**  
+  When you deposit cryptocurrency into an exchange such as Binance or Kraken, you are not given a unique wallet under your sole control. Instead:  
+  - Exchanges pool customer funds into large wallets they control.  
+  - The “deposit address” you see in your account may be one of many addresses that ultimately route into the exchange’s shared hot wallet or cold wallet.  
+  - This means the address you are given may also be used internally by the exchange for other customers at different times.  
+
+- **Internal Accounting**  
+  - The exchange credits your account balance in its internal database when it sees your deposit on the blockchain.  
+  - Trades you perform on the exchange (e.g., buying BTC/USDT) do **not** move coins on the blockchain immediately; instead, the exchange updates its internal ledger to reflect your new balance.  
+  - Actual blockchain transactions only occur when you deposit into the exchange or withdraw out to an external wallet.  
+
+- **Custody vs. Ownership**  
+  - On Ledger or Metamask, you hold the private keys — you directly control the funds.  
+  - On an exchange, the exchange holds the private keys. You own a claim to the funds recorded in their internal system, not the blockchain addresses directly.  
+
+- **Audit Implications**  
+  - You cannot prove control of exchange wallets by signing with private keys (as you could with a Ledger wallet).  
+  - Instead, transaction histories and exchange statements are used to verify balances.  
+  - That is why deposits and withdrawals into/out of exchanges are key evidence in reconciling Koinly records.  
+
 ## Summary
 
 - **Ledger & XPUB**  
