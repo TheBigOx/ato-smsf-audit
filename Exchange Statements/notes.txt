@@ -1,0 +1,1 @@
+Binance account statements only go back as far as 1st Jan 2023, however all transaction data since 2017 for all accounts has been recorded in Koinly and can be found in the //Transactions folder
